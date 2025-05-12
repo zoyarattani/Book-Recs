@@ -1,0 +1,66 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #0d0d0d;
+  color: #f0f0f0;
+}
+
+header {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  color: #00f0ff;
+  text-shadow: 0 0 5px #00f0ff, 0 0 15px #00f0ff;
+}
+
+#filter {
+  text-align: center;
+  margin: 20px;
+}
+
+select {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.book-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+  transition: transform 0.3s;
+}
+
+.book-card:hover {
+  transform: scale(1.03);
+}
+
+.book-card h3 {
+  margin: 10px 0 5px;
+  color: #00f0ff;
+}
+
+.book-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.genre {
+  font-style: italic;
+  color: #aaa;
+}
+
+.rating {
+  color: gold;
+}
