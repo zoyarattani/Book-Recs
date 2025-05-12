@@ -1,37 +1,42 @@
 const books = [
-  { title: "It Ends With Us", author: "Colleen Hoover", genre: "Romance", rating: 5 },
-  { title: "Fourth Wing", author: "Rebecca Yarros", genre: "Fantasy", rating: 5 },
-  { title: "The Guest List", author: "Lucy Foley", genre: "Thriller", rating: 4 },
-  { title: "Better Than The Movies", author: "Lynn Painter", genre: "Romance", rating: 5 },
-  { title: "Verity", author: "Colleen Hoover", genre: "Thriller", rating: 5 },
-  { title: "Iron Flame", author: "Rebecca Yarros", genre: "Fantasy", rating: 5 },
-  { title: "Then She Was Gone", author: "Lisa Jewell", genre: "Thriller", rating: 4 },
-  { title: "A Court of Thorns and Roses", author: "Sarah J. Maas", genre: "Fantasy", rating: 5 },
-  { title: "Ugly Love", author: "Colleen Hoover", genre: "Romance", rating: 4 },
-  { title: "Accidentally Amy", author: "Lynn Painter", genre: "Romance", rating: 4 }
+  { title: "It Ends With Us", author: "Unknown", genre: "Romance", rating: 5, cover: "images/it-ends-with-us.jpg" },
+  { title: "It Starts With Us", author: "Unknown", genre: "Romance", rating: 5, cover: "images/it-starts-with-us.jpg" },
+  { title: "Verity", author: "Unknown", genre: "Romance", rating: 5, cover: "images/verity.jpg" },
+  { title: "All Your Perfects", author: "Unknown", genre: "Romance", rating: 5, cover: "images/all-your-perfects.jpg" },
+  { title: "Ugly Love", author: "Unknown", genre: "Romance", rating: 5, cover: "images/ugly-love.jpg" },
+  { title: "Reminders of Him", author: "Unknown", genre: "Romance", rating: 5, cover: "images/reminders-of-him.jpg" },
+  { title: "November 9", author: "Unknown", genre: "Romance", rating: 5, cover: "images/november-9.jpg" },
+  { title: "Hopeless", author: "Unknown", genre: "Romance", rating: 5, cover: "images/hopeless.jpg" },
+  { title: "Maybe Someday", author: "Unknown", genre: "Romance", rating: 5, cover: "images/maybe-someday.jpg" },
+  { title: "Regretting You", author: "Unknown", genre: "Romance", rating: 5, cover: "images/regretting-you.jpg" },
+  { title: "Slammed", author: "Unknown", genre: "Romance", rating: 5, cover: "images/slammed.jpg" },
+  { title: "Point of Retreat", author: "Unknown", genre: "Romance", rating: 5, cover: "images/point-of-retreat.jpg" },
+  { title: "Confess", author: "Unknown", genre: "Romance", rating: 5, cover: "images/confess.jpg" },
+  { title: "Layla", author: "Unknown", genre: "Romance", rating: 5, cover: "images/layla.jpg" },
+  { title: "Heart Bones", author: "Unknown", genre: "Romance", rating: 5, cover: "images/heart-bones.jpg" },
+  { title: "Without Merit", author: "Unknown", genre: "Romance", rating: 5, cover: "images/without-merit.jpg" },
+  { title: "Too Late", author: "Unknown", genre: "Romance", rating: 5, cover: "images/too-late.jpg" },
+  { title: "The Do Over", author: "Unknown", genre: "Romance", rating: 5, cover: "images/the-do-over.jpg" },
+  { title: "Better Than The Movies", author: "Unknown", genre: "Romance", rating: 5, cover: "images/better-than-the-movies.jpg" },
+  { title: "Mr. Wrong Number", author: "Unknown", genre: "Romance", rating: 5, cover: "images/mr-wrong-number.jpg" },
+  { title: "Accidentally Amy", author: "Unknown", genre: "Romance", rating: 5, cover: "images/accidentally-amy.jpg" },
+  { title: "The Love Wager", author: "Unknown", genre: "Romance", rating: 5, cover: "images/the-love-wager.jpg" },
+  { title: "The Guest List", author: "Unknown", genre: "Thriller", rating: 5, cover: "images/the-guest-list.jpg" },
+  { title: "Then She Was Gone", author: "Unknown", genre: "Thriller", rating: 5, cover: "images/then-she-was-gone.jpg" },
+  { title: "Never Never", author: "Unknown", genre: "Thriller", rating: 5, cover: "images/never-never.jpg" },
+  { title: "The Deal", author: "Unknown", genre: "Romance", rating: 5, cover: "images/the-deal.jpg" },
+  { title: "If He Had Been With Me", author: "Unknown", genre: "Romance", rating: 5, cover: "images/if-he-had-been-with-me.jpg" },
+  { title: "Fourth Wing", author: "Unknown", genre: "Fantasy", rating: 5, cover: "images/fourth-wing.jpg" },
+  { title: "Iron Flame", author: "Unknown", genre: "Fantasy", rating: 5, cover: "images/iron-flame.jpg" },
+  { title: "Everyone Is Watching", author: "Unknown", genre: "Thriller", rating: 5, cover: "images/everyone-is-watching.jpg" },
+  { title: "A Court of Thorns and Roses", author: "Unknown", genre: "Fantasy", rating: 5, cover: "images/a-court-of-thorns-and-roses.jpg" },
+  { title: "A Court of Mist and Fury", author: "Unknown", genre: "Fantasy", rating: 5, cover: "images/a-court-of-mist-and-fury.jpg" },
+  { title: "A Court of Wings and Ruin", author: "Unknown", genre: "Fantasy", rating: 5, cover: "images/a-court-of-wings-and-ruin.jpg" },
+  { title: "Butcher and Blackbird", author: "Unknown", genre: "Fantasy", rating: 5, cover: "images/butcher-and-blackbird.jpg" },
+  { title: "Lark and Leather", author: "Unknown", genre: "Fantasy", rating: 5, cover: "images/lark-and-leather.jpg" },
+  { title: "The Stranger in her house", author: "Unknown", genre: "Thriller", rating: 5, cover: "images/the-stranger-in-her-house.jpg" },
+  { title: "Flawless", author: "Unknown", genre: "Fantasy", rating: 5, cover: "images/flawless.jpg" },
+  { title: "Heartless", author: "Unknown", genre: "Fantasy", rating: 5, cover: "images/heartless.jpg" },
+  { title: "Powerless", author: "Unknown", genre: "Fantasy", rating: 5, cover: "images/powerless.jpg" },
+  { title: "Reckless", author: "Unknown", genre: "Fantasy", rating: 5, cover: "images/reckless.jpg" }
 ];
-
-function displayBooks(filtered = "All") {
-  const container = document.getElementById("book-container");
-  container.innerHTML = "";
-
-  books
-    .filter(book => filtered === "All" || book.genre === filtered)
-    .forEach(book => {
-      const card = document.createElement("div");
-      card.className = "book-card";
-      card.innerHTML = `
-        <h3>${book.title}</h3>
-        <p class="genre">${book.genre}</p>
-        <p>by ${book.author}</p>
-        <p class="rating">${"★".repeat(book.rating)}</p>
-      `;
-      container.appendChild(card);
-    });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const select = document.getElementById("genre-select");
-  select.addEventListener("change", () => displayBooks(select.value));
-  displayBooks();
-});
