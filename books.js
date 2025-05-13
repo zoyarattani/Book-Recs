@@ -8,6 +8,8 @@ const books = [
 
 function displayBooks(filtered = "All") {
   const container = document.getElementById("book-container");
+  if (!container) return;
+
   container.innerHTML = "";
 
   books
@@ -27,7 +29,10 @@ function displayBooks(filtered = "All") {
 
 document.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("genre-select");
-  select.addEventListener("change", () => displayBooks(select.value));
+  if (select) {
+    select.addEventListener("change", () => displayBooks(select.value));
+  }
   displayBooks();
 });
+
 
