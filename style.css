@@ -22,13 +22,18 @@ body {
 
 header {
   font-family: 'Pacifico', cursive;
-  background: #ffe4e1;
+  background: #ffe5b4; /* or your gradient */
+  border: 2px solid #f9cfae; /* pastel border color */
+  border-radius: 16px;
   padding: 20px;
+  margin: 20px auto; /* margin creates space around it */
+  width: fit-content; /* makes the border fit content width */
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 #filter {
   text-align: center;
