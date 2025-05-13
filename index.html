@@ -1,80 +1,35 @@
-body {
-  font-family: 'Quicksand', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url('images/library-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zoya's Book Recs</title>
 
-header {
-  background: rgba(255, 239, 239, 0.9);
-  color: #5a3e85;
-  padding: 25px;
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  border-bottom: 3px dashed #FFD700;
-  text-shadow: 0 1px 2px #fff;
-}
+  <!-- Load Quicksand font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 
-#filter {
-  text-align: center;
-  margin: 20px auto;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 12px 20px;
-  border-radius: 12px;
-  display: inline-block;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>Zoya's Book Recommendations</header>
 
-select {
-  padding: 8px 12px;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  background-color: #fff3f3;
-  color: #5a3e85;
-}
+  <div id="filter">
+    <label for="genre-select"><strong>Filter by Genre:</strong></label>
+    <select id="genre-select">
+      <option value="All">All</option>
+      <option value="Romance">Romance</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Thriller">Thriller</option>
+    </select>
+  </div>
 
-.book-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 30px;
-}
+  <div class="book-grid" id="book-container"></div>
 
-.book-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 12px;
-  padding: 18px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.2s ease-in-out;
-}
+  <!-- Load the book logic -->
+  <script src="books.js"></script>
+</body>
+</html>
 
-.book-card:hover {
-  transform: scale(1.03);
-}
-
-.book-card h3 {
-  margin: 10px 0 5px;
-  color: #222;
-  font-size: 1.1rem;
-}
-
-.genre {
-  font-style: italic;
-  color: #666;
-}
-
-.rating {
-  color: #FFD700;
-  font-size: 1.2rem;
-  margin-top: 8px;
-}
 
 
