@@ -1,3 +1,5 @@
+console.log("✅ JavaScript file loaded");
+
 const books = [
   { title: "It Ends With Us", author: "Colleen Hoover", genre: "Romance", rating: 5 },
   { title: "Fourth Wing", author: "Rebecca Yarros", genre: "Fantasy", rating: 5 },
@@ -7,8 +9,12 @@ const books = [
 ];
 
 function displayBooks(filtered = "All") {
+  console.log("📚 Rendering books with filter:", filtered);
   const container = document.getElementById("book-container");
-  if (!container) return;
+  if (!container) {
+    console.error("❌ Missing #book-container");
+    return;
+  }
 
   container.innerHTML = "";
 
@@ -19,21 +25,22 @@ function displayBooks(filtered = "All") {
       card.className = "book-card";
       card.innerHTML = `
         <h3>${book.title}</h3>
-        <p class="genre">${book.genre}</p>
-        <p>by ${book.author}</p>
-        <p class="rating">${"★".repeat(book.rating)}</p>
+        <p>${book.author} - <em>${book.genre}</em></p>
+        <p>${"★".repeat(book.rating)}</p>
       `;
       container.appendChild(card);
     });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("🟢 DOM ready");
   const select = document.getElementById("genre-select");
   if (select) {
     select.addEventListener("change", () => displayBooks(select.value));
   }
   displayBooks();
 });
+
 
 
 
