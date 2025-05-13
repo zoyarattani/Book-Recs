@@ -47,7 +47,6 @@ const books = [
 ];
 
 function displayBooks(filtered = "All") {
-  console.log("📚 Rendering books with filter:", filtered);
   const container = document.getElementById("book-container");
   if (!container) {
     console.error("❌ Missing #book-container");
@@ -57,24 +56,36 @@ function displayBooks(filtered = "All") {
   container.innerHTML = "";
 
   books
-    .filter(book => filtered === "All" || book.genre === filtered)
+    .filter(book => {
+      if (filtered === "All") return true;
+      if (Array.isArray(book.genre)) {
+        return book.genre.includes(filtered);
+      } else {
+        return book.genre === filtered;
+      }
+    })
     .forEach(book => {
+      const genresText = Array.isArray(book.genre)
+        ? book.genre.join(", ")
+        : book.genre;
+
       const card = document.createElement("div");
       card.className = "book-card";
-      card.innerHTML = 
+      card.innerHTML = `
         <h3>${book.title}</h3>
-        <p>${book.author} - <em>${book.genre}</em></p>
-        <p>${"★".repeat(book.rating)}</p>
-      ;
+        <p class="genre">${genresText}</p>
+        <p>by ${book.author}</p>
+        <p class="rating">${"★".repeat(book.rating)}</p>
+      `;
       container.appendChild(card);
     });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("🟢 DOM ready");
   const select = document.getElementById("genre-select");
   if (select) {
     select.addEventListener("change", () => displayBooks(select.value));
   }
   displayBooks();
 });
+
