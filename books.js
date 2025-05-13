@@ -57,28 +57,17 @@ function displayBooks(filtered = "All") {
   container.innerHTML = "";
 
   books
-    .filter(book => filtered === "All" || book.genre === filtered)
+    .filter(book => filtered === "All" || book.genre === filtered || 
+      (Array.isArray(book.genre) && book.genre.includes(filtered)))
     .forEach(book => {
+      const genreText = Array.isArray(book.genre) ? book.genre.join(", ") : book.genre;
       const card = document.createElement("div");
       card.className = "book-card";
       card.innerHTML = `
         <h3>${book.title}</h3>
-        <p>${book.author} - <em>${book.genre}</em></p>
-        <p>${"★".repeat(book.rating)}</p>
+        <p>${book.author} - <em>${genreText}</em></p>
+        <p class="rating">${"★".repeat(Math.round(book.rating))}</p>
       `;
       container.appendChild(card);
     });
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("🟢 DOM ready");
-  const select = document.getElementById("genre-select");
-  if (select) {
-    select.addEventListener("change", () => displayBooks(select.value));
-  }
-  displayBooks();
-});
-
-
-
-
