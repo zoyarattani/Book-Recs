@@ -35,7 +35,7 @@ const books = [
   { title: "A Court of Mist and Fury", author: "Sarah J. Maas", genre: ["Romance", "Fantasy"], rating: 5, link: "https://a.co/d/1GBfLE3"},
   { title: "A Court of Wings and Ruin", author: "Sarah J. Maas", genre: ["Romance", "Fantasy"], rating: 3.5, link: "https://a.co/d/9qEmcDi"},
   { title: "Butcher and Blackbird", author: "Brynne Weaver", genre: ["Romance", "Thriller"], rating: 4.5, link: "https://a.co/d/95RzM4f"},
-  { title: "Leather and Lark", author: "Brynne Weaver", genre: ["Romance", "Fantasy"], rating: 3, link: "https://a.co/d/c6FYWRt"},
+  { title: "Leather and Lark", author: "Brynne Weaver", genre: ["Romance", "Thriller"], rating: 3, link: "https://a.co/d/c6FYWRt"},
   { title: "The Stranger in Her House", author: "John Marrs", genre: "Thriller", rating: 4, link: "https://a.co/d/6EMGSNC"},
   { title: "Flawless", author: "Elsie Silver", genre: "Romance", rating: 5, link: "https://a.co/d/9Uil4Sx"},
   { title: "Heartless", author: "Elsie Silver", genre: "Romance", rating: 4, link: "https://a.co/d/fGfrB39"},
