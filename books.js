@@ -41,7 +41,7 @@ const books = [
           { title: "Heartless", author: "Elsie Silver", genre: "Romance", rating: 4, link: "https://a.co/d/fGfrB39"},
           { title: "Powerless", author: "Elsie Silver", genre: "Romance", rating: 3.5, link: "https://a.co/d/hXDqikw"},
           { title: "Reckless", author: "Elsie Silver", genre: "Romance", rating: 4, link: "https://a.co/d/izKI4PM"},
-          { title: "Hopeless", author: "Elsie Silver", genre: "Romance", rating: 4.5, "https://a.co/d/5vlBxmx"},
+          { title: "Hopeless", author: "Elsie Silver", genre: "Romance", rating: 4.5, link: "https://a.co/d/5vlBxmx"},
           { title: "Wild Love", author: "Elsie Silver", genre: "Romance", rating: 4, link: "https://a.co/d/6s6kk0F"},
   
 ];
