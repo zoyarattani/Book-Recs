@@ -6,7 +6,7 @@ const books = [
   { title: "The Guest List", author: "Lucy Foley", genre: "Thriller", rating: 4},
   { title: "It Starts With Us", author: "Colleen Hoover", genre: "Romance", rating: 3.5},
   { title: "Verity", author: "Colleen Hoover", genre: "Thriller", rating: 5},
-  { title: "All Your Perfects", author: "Colleen Hoover", genre: "Romance"},
+  { title: "All Your Perfects", author: "Colleen Hoover", genre: "Romance", rating: 4},
     { title: "Ugly Love", author: "Colleen Hoover", genre: "Romance", rating: 3.5},
     { title: "Reminders of Him", author: "Colleen Hoover", genre: "Romance", rating: 4},
     { title: "November 9", author: "Colleen Hoover", genre: "Romance", rating: 4},
