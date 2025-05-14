@@ -80,6 +80,17 @@ select {
   color: gold;
 }
 
+.buy-icon {
+  margin-left: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.buy-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
 
 
 
