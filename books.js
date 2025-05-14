@@ -71,15 +71,18 @@ function displayBooks(filtered = "All") {
 
       const card = document.createElement("div");
       card.className = "book-card";
-  card.innerHTML = `
-  <h3>${book.title}</h3>
-  <p class="author">by ${book.author}</p>
-  <p class="genre">${genresText}</p>
-  <p class="rating">
-    ${"★".repeat(Math.floor(book.rating))}
-    ${book.rating % 1 === 0.5 ? "½" : ""}
-  </p>
-`;
+card.innerHTML = `
+        <h3>${book.title}</h3>
+        <p class="author">by ${book.author}</p>
+        <p class="genre">${genresText}</p>
+        <p class="rating">
+          ${"★".repeat(Math.floor(book.rating))}
+          ${book.rating % 1 === 0.5 ? "½" : ""}
+        </p>
+      `;
+      container.appendChild(card); 
+    });
+}
 
 
 document.addEventListener("DOMContentLoaded", () => {
