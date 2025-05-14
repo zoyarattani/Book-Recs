@@ -84,8 +84,7 @@ function displayBooks(filtered = "All") {
     });
 }
 
-  container.appendChild(card); // ✅ still needed to actually show the book card on the page
-});
+  
 
 
 
