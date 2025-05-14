@@ -64,26 +64,25 @@ function displayBooks(filtered = "All") {
         return book.genre === filtered;
       }
     })
-   .forEach(book => {
-  const genresText = Array.isArray(book.genre)
-    ? book.genre.join(", ")
-    : book.genre;
+.forEach(book => {
+      const genresText = Array.isArray(book.genre)
+        ? book.genre.join(", ")
+        : book.genre;
 
-  const card = document.createElement("div");
-  card.className = "book-card";
-
-  card.innerHTML = `
-    <h3>
-      ${book.title}
-      ${book.link ? `<a href="${book.link}" target="_blank" class="buy-icon" title="Buy this book">🛒</a>` : ""}
-    </h3>
-    <p class="author">by ${book.author}</p>
-    <p class="genre">${genresText}</p>
-    <p class="rating">
-      ${"★".repeat(Math.floor(book.rating))}
-      ${book.rating % 1 === 0.5 ? "½" : ""}
-    </p>
-  `;
+      const card = document.createElement("div");
+      card.className = "book-card";
+      card.innerHTML = `
+        <h3>${book.title}</h3>
+        <p class="author">by ${book.author}</p>
+        <p class="genre">${genresText}</p>
+        <p class="rating">
+          ${"★".repeat(Math.floor(book.rating))}
+          ${book.rating % 1 === 0.5 ? "½" : ""}
+        </p>
+      `;
+      container.appendChild(card); // ✅ This line was missing!
+    });
+}
 
   container.appendChild(card); // ✅ still needed to actually show the book card on the page
 });
