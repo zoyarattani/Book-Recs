@@ -43,6 +43,9 @@ const books = [
   { title: "Reckless", author: "Elsie Silver", genre: "Romance", rating: 4, link: "https://a.co/d/izKI4PM"},
   { title: "Hopeless", author: "Elsie Silver", genre: "Romance", rating: 4.5, link: "https://a.co/d/5vlBxmx"},
   { title: "Wild Love", author: "Elsie Silver", genre: "Romance", rating: 4, link: "https://a.co/d/6s6kk0F"},
+  { title: "Onyx Storm", author: "Rebecca Yarros", genre: ["Romance", "Fantasy"], rating: 5, link: "https://a.co/d/0avCtGi"},
+  { title: "The Serpent and the Wings of Night", author: "Carissa Broadbent", genre: ["Romance", "Fantasy"], rating: 4.5, link: "https://a.co/d/4B7xD5z"},
+  { title: "The Ashes and the Star Cursed King", author: "Carissa Broadbent", genre: ["Romance", "Fantasy"], rating: 5, link: "https://a.co/d/bNumXsH"}
   
 ];
 
