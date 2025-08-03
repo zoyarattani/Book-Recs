@@ -92,6 +92,67 @@ select {
   cursor: pointer;
 }
 
+/* HOMEPAGE STYLES */
+
+.about-container, .explore-container {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px 30px;
+  margin: 30px auto;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h2,
+.explore-container h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #4b2e2e;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.explore-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.explore-container li {
+  margin: 12px 0;
+}
+
+.explore-container a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #7a4f2d;
+  background-color: #ffe5b4;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.explore-container a:hover {
+  transform: scale(1.05);
+  background-color: #f9cfae;
+  color: #5a3e2b;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #5a3e2b;
+  background: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid #e0c3a0;
+}
 
 
 
